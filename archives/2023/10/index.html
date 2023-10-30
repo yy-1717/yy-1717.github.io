@@ -7,19 +7,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>TEXT1 | YIQING&#39;s Blog</title>
+  <title>Archives: 2023/10 | YIQING&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.顺序表删除第k个元素">
-<meta property="og:type" content="article">
-<meta property="og:title" content="TEXT1">
-<meta property="og:url" content="http://example.com/2022/11/01/TEXT1/index.html">
+  <meta name="description" content="我寻觅了很久的春天">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YIQING&#39;s Blog">
+<meta property="og:url" content="http://example.com/archives/2023/10/index.html">
 <meta property="og:site_name" content="YIQING&#39;s Blog">
-<meta property="og:description" content="1.顺序表删除第k个元素">
+<meta property="og:description" content="我寻觅了很久的春天">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-01T12:22:04.000Z">
-<meta property="article:modified_time" content="2023-06-18T11:03:14.364Z">
 <meta property="article:author" content="YIQING">
-<meta property="article:tag" content="链表题库">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="YIQING&#39;s Blog" type="application/atom+xml">
@@ -160,208 +157,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-TEXT1" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      TEXT1
-    </h1>
-  
-
-        
-        <a href="/2022/11/01/TEXT1/" class="archive-article-date">
-  	<time datetime="2022-11-01T12:22:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-11-01</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/10/30/django%E6%A8%A1%E5%9E%8B%E5%B1%82%EF%BC%9A/" class="archive-article-date">
+  	<time datetime="2023-10-30T11:42:12.245Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-30</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-顺序表删除第k个元素"><a href="#1-顺序表删除第k个元素" class="headerlink" title="1.顺序表删除第k个元素"></a>1.顺序表删除第k个元素</h3><span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/******start******/ </span><br><span class="line"></span><br><span class="line">int DeleteList(pSeqList L, int pos) </span><br><span class="line"></span><br><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">int i; </span><br><span class="line"></span><br><span class="line">if (pos &lt; 1 || pos &gt; L-&gt;length) </span><br><span class="line"></span><br><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">printf(&quot;删除位置不合法!\n&quot;); </span><br><span class="line"></span><br><span class="line">return -1; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (i = pos; i &lt; L-&gt;length; i++) </span><br><span class="line"></span><br><span class="line">&#123; </span><br><span class="line"></span><br><span class="line">L-&gt;elem[i - 1] = L-&gt;elem[i]; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">L-&gt;length -= 1; </span><br><span class="line"></span><br><span class="line">return 1; </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/******end******/ </span><br></pre></td></tr></table></figure>
-
-<h3 id="2-顺序表s在顺序表t中出现的最后1个数据"><a href="#2-顺序表s在顺序表t中出现的最后1个数据" class="headerlink" title="2.顺序表s在顺序表t中出现的最后1个数据"></a>2.顺序表s在顺序表t中出现的最后1个数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/******start******/ </span><br><span class="line">int function(Seq s, Seq t, int *value, int *position)</span><br><span class="line">&#123; int i, j; </span><br><span class="line">for (i = s.length - 1; i &gt;= 0; i--) </span><br><span class="line">&#123; for (j = 0; j &lt; t.length; j++)</span><br><span class="line">     &#123; if (s.data[i] == t.data[j])</span><br><span class="line">       &#123;</span><br><span class="line">*value = s.data[i];</span><br><span class="line">*position = i; return 1; </span><br><span class="line">&#125; &#125; &#125;return 0; &#125;/******end******/</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表s在顺序表t中出现的第一个数据"><a href="#顺序表s在顺序表t中出现的第一个数据" class="headerlink" title="顺序表s在顺序表t中出现的第一个数据"></a>顺序表s在顺序表t中出现的第一个数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq s, Seq t, int *value, int *position)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line"></span><br><span class="line">	for (i = 0; i &lt; s.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j &lt; t.length; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (s.data[i] == t.data[j])</span><br><span class="line">			&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if (j == t.length)</span><br><span class="line">		&#123;</span><br><span class="line">			*value = s.data[i];</span><br><span class="line">			*position = i;</span><br><span class="line">			return 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="查找顺序表第k个位置的元素"><a href="#查找顺序表第k个位置的元素" class="headerlink" title="查找顺序表第k个位置的元素"></a>查找顺序表第k个位置的元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int FindList(pSeqList L, int pos, int *value)</span><br><span class="line">&#123;</span><br><span class="line">	if (pos &lt; 1 || pos &gt; L-&gt;length)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;位置不合法!\n&quot;);</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	*value = L-&gt;elem[pos - 1];</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="构造动态分配内存顺序表"><a href="#构造动态分配内存顺序表" class="headerlink" title="构造动态分配内存顺序表"></a>构造动态分配内存顺序表</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int InitList(pSeqList L, int listsize)</span><br><span class="line">&#123;</span><br><span class="line">	L-&gt;elem = (int *)malloc(listsize * sizeof(int));</span><br><span class="line">	if (L-&gt;elem == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;</span><br><span class="line">	L-&gt;length = 0;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="线性顺序表插入元素操作"><a href="#线性顺序表插入元素操作" class="headerlink" title="线性顺序表插入元素操作"></a>线性顺序表插入元素操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int InsertList(pSeqList L, int x, int position)</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line"></span><br><span class="line">	if (position &lt; 1 || position &gt; L-&gt;length + 1)</span><br><span class="line">	&#123;</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;</span><br><span class="line">	if (L-&gt;length &gt;= L-&gt;listsize)</span><br><span class="line">	&#123;</span><br><span class="line">		return -2;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i = L-&gt;length; i &gt;= position; i--)</span><br><span class="line">	&#123;</span><br><span class="line">		L-&gt;elem[i] = L-&gt;elem[i - 1];</span><br><span class="line">	&#125;</span><br><span class="line">	L-&gt;elem[i] = x;</span><br><span class="line">	L-&gt;length += 1;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除所有值为k的倍数的元素"><a href="#删除所有值为k的倍数的元素" class="headerlink" title="删除所有值为k的倍数的元素"></a>删除所有值为k的倍数的元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void function(Seq *la, int k)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line"></span><br><span class="line">	for (i = 0, j = 0; i &lt; la-&gt;length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		la-&gt;data[j] = la-&gt;data[i];</span><br><span class="line">		if (la-&gt;data[i] % k != 0)</span><br><span class="line">		&#123;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	la-&gt;length = j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表一元多项式求和"><a href="#顺序表一元多项式求和" class="headerlink" title="顺序表一元多项式求和"></a>顺序表一元多项式求和</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq one, Seq two, Seq *three)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line"></span><br><span class="line">	i = j = 0;</span><br><span class="line"></span><br><span class="line">	while (i &lt; one.length &amp;&amp; j &lt; two.length)</span><br><span class="line">	&#123;</span><br><span class="line">		if (one.data[i].exponent &lt; two.data[j].exponent)</span><br><span class="line">		&#123;</span><br><span class="line">			if (insert(three, one.data[i]) &lt; 0)</span><br><span class="line">			&#123;</span><br><span class="line">				return -1;</span><br><span class="line">			&#125;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">		else if (one.data[i].exponent &gt; two.data[j].exponent)</span><br><span class="line">		&#123;</span><br><span class="line">			if (insert(three, two.data[j]) &lt; 0)</span><br><span class="line">			&#123;</span><br><span class="line">				return -1;</span><br><span class="line">			&#125;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			one.data[i].coefficient += two.data[j].coefficient;</span><br><span class="line">			if (one.data[i].coefficient != 0)</span><br><span class="line">			&#123;</span><br><span class="line">				if (insert(three, one.data[i]) &lt; 0)</span><br><span class="line">				&#123;</span><br><span class="line">					return -1;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			i++;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if (i &lt; one.length)</span><br><span class="line">	&#123;</span><br><span class="line">		while (i &lt; one.length)</span><br><span class="line">		&#123;</span><br><span class="line">			if (insert(three, one.data[i]) &lt; 0)</span><br><span class="line">			&#123;</span><br><span class="line">				return -1;</span><br><span class="line">			&#125;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		while (j &lt; two.length)</span><br><span class="line">		&#123;</span><br><span class="line">			if (insert(three, two.data[j]) &lt; 0)</span><br><span class="line">			&#123;</span><br><span class="line">				return -1;</span><br><span class="line">			&#125;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表一元多项式求积"><a href="#顺序表一元多项式求积" class="headerlink" title="顺序表一元多项式求积"></a>顺序表一元多项式求积</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq one, Seq two, Seq *three)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line">	elemtype temp;</span><br><span class="line"></span><br><span class="line">	for (i = 0; i &lt; one.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j &lt; two.length; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			temp.coefficient = one.data[i].coefficient * two.data[j].coefficient;</span><br><span class="line">			temp.exponent = one.data[i].exponent + two.data[j].exponent;</span><br><span class="line">			if (find(*three, temp) == 1)</span><br><span class="line">			&#123;</span><br><span class="line">				if (merge(three, temp) &lt; 0)</span><br><span class="line">				&#123;</span><br><span class="line">					return -1;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				if (insert(three, temp) &lt; 0)</span><br><span class="line">				&#123;</span><br><span class="line">					return -1;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表s在顺序表t中未出现的元素个数"><a href="#顺序表s在顺序表t中未出现的元素个数" class="headerlink" title="顺序表s在顺序表t中未出现的元素个数"></a>顺序表s在顺序表t中未出现的元素个数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq s, Seq t)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line">	int cnt = 0;</span><br><span class="line"></span><br><span class="line">	for (i = 0; i &lt; s.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j &lt; t.length; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (s.data[i] == t.data[j])</span><br><span class="line">			&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if (j == t.length)</span><br><span class="line">		&#123;</span><br><span class="line">			cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表删除值为value的元素"><a href="#顺序表删除值为value的元素" class="headerlink" title="顺序表删除值为value的元素"></a>顺序表删除值为value的元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">int DeleteList(pSeqList L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line"></span><br><span class="line">	for (i = 0; i &lt; L-&gt;length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		if (L-&gt;elem[i] == value)</span><br><span class="line">		&#123;</span><br><span class="line">			for (j = i; j &lt; L-&gt;length - 1; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				L-&gt;elem[j] = L-&gt;elem[j + 1];</span><br><span class="line">			&#125;</span><br><span class="line">			L-&gt;length -= 1;</span><br><span class="line">			return 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;删除的元素不存在!\n&quot;);</span><br><span class="line">	return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表的结构声明"><a href="#顺序表的结构声明" class="headerlink" title="顺序表的结构声明"></a>顺序表的结构声明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">typedef struct _SeqList</span><br><span class="line">&#123;</span><br><span class="line">	int *elem;</span><br><span class="line">	int length;</span><br><span class="line">	int listsize;</span><br><span class="line">&#125; SeqList, *pSeqList;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表s在顺序表t中出现的元素个数"><a href="#顺序表s在顺序表t中出现的元素个数" class="headerlink" title="顺序表s在顺序表t中出现的元素个数"></a>顺序表s在顺序表t中出现的元素个数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq s, Seq t)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line">	int cnt = 0;</span><br><span class="line"></span><br><span class="line">	for (i = 0; i &lt; s.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j &lt; t.length; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (s.data[i] == t.data[j])</span><br><span class="line">			&#123;</span><br><span class="line">				cnt++;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="将存于Lb中的元素从La中删除"><a href="#将存于Lb中的元素从La中删除" class="headerlink" title="将存于Lb中的元素从La中删除"></a>将存于Lb中的元素从La中删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">void function(Seq *la, Seq lb)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j, k;</span><br><span class="line"></span><br><span class="line">	for (i = 0; i &lt; lb.length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j &lt; la-&gt;length; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (la-&gt;data[j] == lb.data[i])</span><br><span class="line">			&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		if (j &lt; la-&gt;length)</span><br><span class="line">		&#123;</span><br><span class="line">			for (k = j; k &lt; la-&gt;length - 1; k++)</span><br><span class="line">			&#123;</span><br><span class="line">				la-&gt;data[k] = la-&gt;data[k + 1];</span><br><span class="line">			&#125;</span><br><span class="line">			la-&gt;length--;</span><br><span class="line">			i--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="顺序表s在顺序表t中未出现的最后一个数据"><a href="#顺序表s在顺序表t中未出现的最后一个数据" class="headerlink" title="顺序表s在顺序表t中未出现的最后一个数据"></a>顺序表s在顺序表t中未出现的最后一个数据</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq s, Seq t, int *value, int *position)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line"></span><br><span class="line">	for (i = s.length - 1; i &gt;= 0; i--)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j &lt; t.length; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (s.data[i] == t.data[j])</span><br><span class="line">			&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if (j == t.length)</span><br><span class="line">		&#123;</span><br><span class="line">			*value = s.data[i];</span><br><span class="line">			*position = i;</span><br><span class="line">			return 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="查找顺序表值为value的元素位置"><a href="#查找顺序表值为value的元素位置" class="headerlink" title="查找顺序表值为value的元素位置"></a>查找顺序表值为value的元素位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int FindList(pSeqList L, int value)</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	</span><br><span class="line">	for (i = 0; i &lt; L-&gt;length; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		if (L-&gt;elem[i] == value)</span><br><span class="line">		&#123;</span><br><span class="line">			return i + 1;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="将顺序表l1中的奇数元素删除，并将删除的创建到l2中"><a href="#将顺序表l1中的奇数元素删除，并将删除的创建到l2中" class="headerlink" title="将顺序表l1中的奇数元素删除，并将删除的创建到l2中"></a>将顺序表l1中的奇数元素删除，并将删除的创建到l2中</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">int function(Seq *l1, Seq *l2)</span><br><span class="line">&#123;</span><br><span class="line">	int i, j;</span><br><span class="line"></span><br><span class="line">	i = 0;</span><br><span class="line">	while (i &lt; l1-&gt;length)</span><br><span class="line">	&#123;</span><br><span class="line">		if (l1-&gt;data[i] % 2 != 0)</span><br><span class="line">		&#123;</span><br><span class="line">			l2-&gt;data[l2-&gt;length] = l1-&gt;data[i];</span><br><span class="line">			l2-&gt;length++;</span><br><span class="line">			for (j = i; j &lt; l1-&gt;length - 1; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				l1-&gt;data[j] = l1-&gt;data[j + 1];</span><br><span class="line">			&#125;</span><br><span class="line">			l1-&gt;length--;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="在已知的顺序表中某个位置加入元素"><a href="#在已知的顺序表中某个位置加入元素" class="headerlink" title="在已知的顺序表中某个位置加入元素"></a>在已知的顺序表中某个位置加入元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">链表题库</a>
-        		</li>
-      		
-		</ul>
-	</div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/11/01/TEXT1/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2023/10/30/django%E6%A8%A1%E5%9E%8B%E5%B1%82%EF%BC%9A/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -384,8 +216,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
